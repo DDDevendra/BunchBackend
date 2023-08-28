@@ -306,7 +306,7 @@ export async function givebunch(req, res) {
       if (bunch.MyUser) {
         const a = await user.findById(bunch.MyUser);
         if (a) {
-          const b = `http://localhost:9005/${a.profileImg.replace(/\\/g, "/")}`;
+          const b = a.profileImg;
           return b;
         }
       }
